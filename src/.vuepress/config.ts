@@ -3,7 +3,7 @@ import theme from "./theme.js";
 import { componentsPlugin } from "vuepress-plugin-components";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/yhc-web/",
   
   locales: {
     "/": {
