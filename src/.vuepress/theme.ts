@@ -116,7 +116,7 @@ export default hopeTheme({
       vuePlayground: true,
     },
     components: {
-      components:["VPBanner","VPCard","VidStack"]
+      components:["VPBanner","VPCard","VidStack","YouTube"]
     }
 
 

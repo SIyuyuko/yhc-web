@@ -36,41 +36,66 @@ FreeMod 模组池将允许按照规则，“自由”选择并使用模组。
 
 - HD1
 
-<VidStack src="D:/yhc/yhc-web/src/docs/video/HD1.mp4" />
+<VidStack src="youtube/u5RS-Jrj9ac" />
 
 - HD2
 
-<VidStack src="https://www.bilibili.com/video/BV1Wj411L7qA" />
+<VidStack src="youtube/5SpWEn2hQ2E" />
 
 - HD3
 
+<VidStack src="youtube/WDq19Y-PQcE" />
+
 - HD4
+
+<VidStack src="youtube/WihirLd0yQQ" />
 
 - HD5
 
+<VidStack src="youtube/UWCDA0MmPw8" />
+
 - HD6
+
+<VidStack src="youtube/2jgD3l6xGIM" />
 
 - HD7
 
+<VidStack src="youtube/rUOoE2dA3rA" />
+
 ### NM
 
-- HD1
+- NM1
 
-- HD2
+<VidStack src="youtube/UWCDA0MmPw8" />
+
+- NM2
+
+<VidStack src="youtube/UWCDA0MmPw8" />
 
 ### DT
 
 - DT1
 
+<VidStack src="youtube/UWCDA0MmPw8" />
+
 - DT2
 
+<VidStack src="youtube/UWCDA0MmPw8" />
+
 - DT3
+
+<VidStack src="youtube/UWCDA0MmPw8" />
 
 ### FM
 
 - FM1
 
+<VidStack src="youtube/UWCDA0MmPw8" />
+
 - FM2
+
+<VidStack src="youtube/UWCDA0MmPw8" />
 
 - FM3
 
+<VidStack src="youtube/UWCDA0MmPw8" />
