@@ -78,6 +78,8 @@ jobs:
         with:
           token: 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
           enablement: true
+        env:
+          BUILD_PATH: src/.vuepress/dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
