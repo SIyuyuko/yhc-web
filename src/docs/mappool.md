@@ -36,66 +36,66 @@ FreeMod 模组池将允许按照规则，“自由”选择并使用模组。
 
 - HD1
 
-<VidStack src="youtube/u5RS-Jrj9ac" />
+<VidStack src="youtube/u5RS-Jrj9ac" poster="https://files.catbox.moe/ws4nfj.jpg" />
 
 - HD2
 
-<VidStack src="youtube/5SpWEn2hQ2E" />
+<VidStack src="youtube/5SpWEn2hQ2E" poster="https://files.catbox.moe/43yd5l.jpg" />
 
 - HD3
 
-<VidStack src="youtube/WDq19Y-PQcE" />
+<VidStack src="youtube/WDq19Y-PQcE" poster="https://files.catbox.moe/l6tgka.jpg" />
 
 - HD4
 
-<VidStack src="youtube/WihirLd0yQQ" />
+<VidStack src="youtube/WihirLd0yQQ" poster="https://files.catbox.moe/b905bs.png" />
 
 - HD5
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/4af1oj.jpg" />
 
 - HD6
 
-<VidStack src="youtube/2jgD3l6xGIM" />
+<VidStack src="youtube/2jgD3l6xGIM" poster="https://files.catbox.moe/2g5sl1.jpg" />
 
 - HD7
 
-<VidStack src="youtube/rUOoE2dA3rA" />
+<VidStack src="youtube/rUOoE2dA3rA" poster="https://files.catbox.moe/233588.jpg" />
 
 ### NM
 
 - NM1
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/yaAtw3ryB3Q" poster="https://files.catbox.moe/z98p6t.jpg" />
 
 - NM2
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/sIxU8-czBs4" poster="https://files.catbox.moe/w1b624.jpg"/>
 
 ### DT
 
 - DT1
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/6UK-me6vKHg" poster="https://files.catbox.moe/3ss2eo.jpg"/>
 
 - DT2
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/d76k2o.jpg" />
 
 - DT3
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/u6dmkv.jpg" />
 
 ### FM
 
 - FM1
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/frez3h.jpg" />
 
 - FM2
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/lk278d.png" />
 
 - FM3
 
-<VidStack src="youtube/UWCDA0MmPw8" />
+<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/p64eoi.jpg" />
