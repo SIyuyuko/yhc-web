@@ -56,7 +56,7 @@ jobs:
   # 单次部署的工作描述
   deploy:
     environment:
-      name: github-pages
+      name: yhc-web
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
