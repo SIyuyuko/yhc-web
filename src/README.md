@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 主页
-bgImage: https://files.catbox.moe/d0s6zz.png
+# bgImage: https://files.catbox.moe/d0s6zz.png
 # bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed

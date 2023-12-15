@@ -12,17 +12,25 @@
 	text-shadow: #A8A8A8 1px 0 1px;
 }
 
-.vp-hero-mask {
-	filter: brightness(0.6) blur(0.8px);
-}
-
 .vp-hero-actions {
 	text-align: center;
 }
 
-.vp-footer-wrapper {
-	background-image: url("https: //files.catbox.moe/uei25u.jpg");
+#navbar.vp-navbar {
+	backdrop-filter: opacity(0.8) saturate(150%) blur(12px);
+}
+
+.theme-container.no-sidebar {
+	background-image: url('https://files.catbox.moe/d0s6zz.png');
+}
+
+
+.theme-container.has-toc {
 	background: none;
+
+	#navbar.vp-navbar {
+		backdrop-filter: opacity(1) saturate(150%) blur(12px);
+	}
 }
 
 // @media

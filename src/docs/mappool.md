@@ -36,29 +36,41 @@ FreeMod 模组池将允许按照规则，“自由”选择并使用模组。
 
 - HD1
 
+  - 常规综合长图
+
 <VidStack src="youtube/u5RS-Jrj9ac" poster="https://files.catbox.moe/ws4nfj.jpg" />
 
 - HD2
+
+  - 串切图
 
 <VidStack src="youtube/5SpWEn2hQ2E" poster="https://files.catbox.moe/43yd5l.jpg" />
 
 - HD3
 
+  - 强双图
 <VidStack src="youtube/WDq19Y-PQcE" poster="https://files.catbox.moe/l6tgka.jpg" />
 
 - HD4
-
+  
+  - 移动图
 <VidStack src="youtube/WihirLd0yQQ" poster="https://files.catbox.moe/b905bs.png" />
 
 - HD5
+
+  - 高bpm图
 
 <VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/4af1oj.jpg" />
 
 - HD6
 
+  - 低AR图
+
 <VidStack src="youtube/2jgD3l6xGIM" poster="https://files.catbox.moe/2g5sl1.jpg" />
 
 - HD7
+
+  - 低AR图
 
 <VidStack src="youtube/rUOoE2dA3rA" poster="https://files.catbox.moe/233588.jpg" />
 

@@ -16,6 +16,8 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
+  logoDark:"/logoDark.svg",
+
   repo: "SIyuyuko/yhc-web",
 
   docsDir: "src",
