@@ -9,7 +9,7 @@ export default defineUserConfig({
     "/": {
       lang: "zh-CN",
       title: "Yuyuko's Hidden Cup",
-      description: "vuepress-theme-hope 的文档演示",
+      description: "YHC官方网站",
     },
     // "/en/": {
     //   lang: "en-US",

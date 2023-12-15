@@ -11,7 +11,7 @@ export const zhNavbar = navbar([
       {
         text:"",
         icon: "lightbulb",
-        children: ["intro","staff","mappool"],
+        children: ["intro","mappool","staff"],
       },
     ],
   },

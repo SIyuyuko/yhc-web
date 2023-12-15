@@ -34,7 +34,7 @@ Yuyuko's Hidden Cup(YHC) 是由玩家 [SIyuyuko](https://osu.ppy.sh/users/979403
 
 - 图池结构与常规团队赛不同， HD 图池占比增加，同时去除了 HR 图池。
 
-::: tip
+::: warning
 
 - **YHC 并不是纯 HD 比赛，请不要混淆概念以免不必要的误会。**
 
