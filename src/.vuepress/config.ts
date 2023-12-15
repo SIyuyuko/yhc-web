@@ -21,6 +21,25 @@ export default defineUserConfig({
 
   theme,
 
+  head: [
+    [
+      "link",
+      {
+        href: "/assets/font/AlibabaPuHuiTi-3-55-Regular.ttf",
+        rel: "stylesheet",
+      },
+    ],
+    [
+      "link",
+      {
+        href: "/assets/font/Torus-SemiBold.ttf",
+        rel: "stylesheet",
+      },
+    ],
+    
+  ],
+
+
   // Enable it with pwa
   // shouldPrefetch: false,
   // plugins: [
