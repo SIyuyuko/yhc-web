@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://vuepress-theme-hope-docs-demo.netlify.app/yhc-web/sitemap.xml
+Sitemap: https://siyuyuko.github.io/yhc-web/sitemap.xml
