@@ -9,7 +9,7 @@ export default defineUserConfig({
     "/": {
       lang: "zh-CN",
       title: "Yuyuko's Hidden Cup",
-      description: "YHC官方网站",
+      description: "Yuyuko's Hidden Cup Official",
     },
     // "/en/": {
     //   lang: "en-US",
@@ -25,14 +25,14 @@ export default defineUserConfig({
     [
       "link",
       {
-        href: "/assets/font/AlibabaPuHuiTi-3-55-Regular.ttf",
+        href: "/yhc-web/assets/font/AlibabaPuHuiTi-3-55-Regular.ttf",
         rel: "stylesheet",
       },
     ],
     [
       "link",
       {
-        href: "/assets/font/Torus-SemiBold.ttf",
+        href: "/yhc-web/assets/font/Torus-SemiBold.ttf",
         rel: "stylesheet",
       },
     ],
