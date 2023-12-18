@@ -129,11 +129,6 @@ export default hopeTheme({
             title: "提示",
             content: "谱面示例视频需要切换VPN才能观看",
             actions: [
-              // {
-              //   text: "Primary Action",
-              //   link: "",
-              //   type: "primary",
-              // },
               { text: "好的" },
             ],
             fullscreen: false,
@@ -152,6 +147,24 @@ export default hopeTheme({
               },
               { text: "osu!新人群",
                 link: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Djk6kWsVekla1K-rmKznhmW4QxKahu8o",
+             },
+            ],
+            fullscreen: false,
+            confirm: true,
+            showOnce:false,
+          },
+          {
+            path: "/memory/",
+            title: "投稿征集中",
+            content: "投稿通道长期开放，欢迎分享你的比赛回忆",
+            actions: [
+              {
+                text: "发邮件",
+                link: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WT02PjwhIRkoKHc6NjQ",
+                type: "primary",
+              },
+              { text: "联系主办",
+                link: "https://qm.qq.com/q/wNrJd3X2Mw",
              },
             ],
             fullscreen: false,
