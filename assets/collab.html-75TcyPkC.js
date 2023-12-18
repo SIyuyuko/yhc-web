@@ -1,1 +1,0 @@
-import{_ as a}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c as o,a as e,d as c}from"./app-Gj5Q9heP.js";const r={},s=e("h2",{id:"_1213",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#_1213","aria-hidden":"true"},"#"),c(" 1213")],-1),_=[s];function n(d,l){return t(),o("div",null,_)}const f=a(r,[["render",n],["__file","collab.html.vue"]]);export{f as default};
