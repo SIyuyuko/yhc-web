@@ -1,6 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { componentsPlugin } from "vuepress-plugin-components";
 
 export default hopeTheme({
   hostname: "https://siyuyuko.github.io/",
@@ -120,8 +121,49 @@ export default hopeTheme({
       vuePlayground: true,
     },
     components: {
-      components:["VPBanner","VPCard","VidStack","YouTube"]
-    }
+      components: ["VPBanner", "VPCard", "VidStack", "YouTube",],
+      rootComponents: {
+        notice: [
+          {
+            path: "/docs/mappool",
+            title: "提示",
+            content: "谱面示例视频需要切换VPN才能观看",
+            actions: [
+              // {
+              //   text: "Primary Action",
+              //   link: "",
+              //   type: "primary",
+              // },
+              { text: "好的" },
+            ],
+            fullscreen: false,
+            confirm: false,
+            showOnce:false,
+          },
+          {
+            path: "/about/",
+            title: "欢迎加入",
+            content: "点击下方按钮加入交流群👇",
+            actions: [
+              {
+                text: "YHC赛群",
+                link: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Jf7U5QwUvr38DnVL8ia8liJy6GRw9NSp",
+                type: "primary",
+              },
+              { text: "osu!新人群",
+                link: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Djk6kWsVekla1K-rmKznhmW4QxKahu8o",
+             },
+            ],
+            fullscreen: false,
+            confirm: true,
+            showOnce:false,
+          },
+        ]
+      },
+    },
+    blog: {
+      hotReload: true,
+    },
 
 
     // uncomment these if you want a pwa
@@ -181,4 +223,8 @@ export default hopeTheme({
     //   },
     // },
   },
+
+  blog: {
+    name: "Yuyuko's Hidden Cup",    
+  }
 });

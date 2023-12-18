@@ -42,9 +42,5 @@ export default defineUserConfig({
 
   // Enable it with pwa
   // shouldPrefetch: false,
-  // plugins: [
-  //   componentsPlugin({
-  //   "components":["VPCard","VPBanner"]
-  //   })
-  // ],
+  
 });

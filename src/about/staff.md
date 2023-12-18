@@ -4,6 +4,10 @@ icon: clipboard-user
 order: 3
 author: SIyuyuko
 date: 2023-12-13
+category:
+  - 关于
+tag:
+  - 玩家
 ---
 
 <VPBanner
@@ -27,6 +31,8 @@ date: 2023-12-13
   ]'
   background="rgba(253, 230, 138, 0.15)"
 />
+
+<!-- more -->
 
 ::: tabs
 
