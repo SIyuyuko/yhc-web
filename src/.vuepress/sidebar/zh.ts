@@ -11,13 +11,13 @@ export const zhSidebar = sidebar({
     },
     {
       text: "归档",
-      icon: "book",
-      prefix: "guide/",
+      icon: "bookmark",
+      prefix: "review/",
       children: "structure",
     },
      {
       text: "回忆",
-      icon: "book",
+      icon: "heart",
       prefix: "memory/",
       children: "structure",
     },

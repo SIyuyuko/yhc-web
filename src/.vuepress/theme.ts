@@ -161,9 +161,12 @@ export default hopeTheme({
         ]
       },
     },
-    blog: {
-      hotReload: true,
-    },
+    // blog: {
+    //   hotReload: true,
+    // },
+    blog: false,
+    
+    photoSwipe: {}
 
 
     // uncomment these if you want a pwa

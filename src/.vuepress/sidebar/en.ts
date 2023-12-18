@@ -13,7 +13,7 @@ export const enSidebar = sidebar({
     {
       text: "Docs",
       icon: "book",
-      prefix: "guide/",
+      prefix: "review/",
       children: "structure",
     },
     "slides",

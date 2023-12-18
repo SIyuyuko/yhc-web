@@ -6,7 +6,7 @@ export const enNavbar = navbar([
   {
     text: "Guide",
     icon: "lightbulb",
-    prefix: "/guide/",
+    prefix: "/review/",
     children: [
       {
         text: "Bar",

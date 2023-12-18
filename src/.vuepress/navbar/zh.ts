@@ -4,12 +4,12 @@ export const zhNavbar = navbar([
   "/",
   {
     text: "文档",
-    icon: "lightbulb",
+    icon: "book",
     prefix: "/docs/",
     children: [
       {
         text:"",
-        icon: "lightbulb",
+        icon: "book",
         children: ["intro","mappool"],
       },
     ],
