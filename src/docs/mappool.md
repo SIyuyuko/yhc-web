@@ -147,7 +147,7 @@ HD7仅在第三轮图池中出现。
 
   - 非常规图，考验选手高速切指和硬实力
 
-<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/u6dmkv.jpg" />
+<VidStack src="youtube/_9MIFUS0Lv0" poster="https://files.catbox.moe/u6dmkv.jpg" />
 
 ::: warning
 
@@ -161,14 +161,14 @@ DT3仅在第三轮图池中出现。
 
   - 常规短图，是图池中容易拿分的位置
 
-<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/frez3h.jpg" />
+<VidStack src="youtube/yDAn6lISoZY" poster="https://files.catbox.moe/frez3h.jpg" />
 
 - FM2
 
   - 常规切指图，考验选手切指稳定性
   - 谱面考点有短切指、tech等
 
-<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/lk278d.png" />
+<VidStack src="youtube/uuMeqdhjW-E" poster="https://files.catbox.moe/lk278d.png" />
 
 - FM3
 
@@ -176,4 +176,4 @@ DT3仅在第三轮图池中出现。
   - 歌曲冷门
   - 谱面考点不定
 
-<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/p64eoi.jpg" />
+<VidStack src="youtube/qhHNJs7YO08" poster="https://files.catbox.moe/p64eoi.jpg" />
