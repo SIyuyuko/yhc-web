@@ -2,7 +2,7 @@
 // home style
 #main-title {
 	font-size: 5.6rem;
-		text-shadow: rgba(237, 68, 161, 0.5) 5px 0 25px;
+	text-shadow: rgba(237, 68, 161, 0.5) 5px 0 25px;
 }
 
 #main-description {
@@ -34,8 +34,12 @@
 	}
 }
 
+.theme-hope-content:not(.custom)>.count-down {
+	margin-top: -300px
+}
+
 // @media
-@media screen and (max-width:425px) {
+@media screen and (max-width:755px) {
 	#main-title {
 		font-size: 3.6rem;
 	}
@@ -43,5 +47,15 @@
 	#main-description {
 		text-align: center;
 		font-size: 1.6rem;
+	}
+
+	.theme-hope-content:not(.custom)>.count-down {
+		margin-top: -260px;
+		.title{
+			font-size: 1.8rem;
+		}
+		.bar{
+			font-size: 1.5rem;
+		}
 	}
 }

@@ -125,6 +125,17 @@ export default hopeTheme({
       rootComponents: {
         notice: [
           {
+            path: "/",
+            title: "提示",
+            content: "网站目前正在开发中，当前内容并非最终内容，点击'确认'继续浏览",
+            actions: [
+              { text: "确认" },
+            ],
+            fullscreen: true,
+            confirm: true,
+            showOnce:true,
+          },
+          {
             path: "/docs/mappool",
             title: "提示",
             content: "谱面示例视频需要切换VPN才能观看",

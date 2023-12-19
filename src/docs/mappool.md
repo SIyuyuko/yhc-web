@@ -141,7 +141,7 @@ HD7仅在第三轮图池中出现。
   - 常规高bpm图，考验选手DT手速爆发
   - bpm大于210
 
-<VidStack src="youtube/UWCDA0MmPw8" poster="https://files.catbox.moe/d76k2o.jpg" />
+<VidStack src="youtube/StXCrElUHCk" poster="https://files.catbox.moe/d76k2o.jpg" />
 
 - DT3
 
