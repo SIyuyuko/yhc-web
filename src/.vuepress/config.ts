@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { getDirname, path } from "@vuepress/utils";
+import metingPlugin from "vuepress-plugin-meting2"
 
 const __dirname = getDirname(import.meta.url);
 
@@ -43,10 +44,27 @@ export default defineUserConfig({
 
   alias: {
     "@countDown":path.resolve(__dirname, "components/countDown.vue"),
-  }
+  },
 
 
   // Enable it with pwa
   // shouldPrefetch: false,
+  plugins: [
+    //meting：https://github.com/OrageKK/vuepress-plugin-meting2#readme
+    metingPlugin({
+      metingOptions: {
+        global:true, // 开启关闭全局播放器
+        server: "netease",
+        api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r",
+        type: "playlist",
+        mid: "8069538335",
+        aplayerOptions: {
+        autoplay: 'false',
+        order: 'random',
+        volume:0.2
+      },
+      },
+    })
+  ]
   
 });
