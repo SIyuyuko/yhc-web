@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{a as t,c as o,b as c}from"./app-dBaXZhwd.js";const _={},s=c("p",null,"功能详情...",-1),a=[s];function n(r,l){return t(),o("div",null,a)}const i=e(_,[["render",n],["__file","team.html.vue"]]);export{i as default};
