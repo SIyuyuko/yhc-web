@@ -37,7 +37,11 @@
 .theme-hope-content:not(.custom)>.count-down {
 	margin-top: -300px
 }
-
+// global
+body,html{
+	// cursor: url(https://img.icons8.com/pastel-glyph/36/F25081/cursor--v1.png),auto;
+	cursor: url(./sakura.png), auto;
+}
 // @media
 @media screen and (max-width:755px) {
 	#main-title {
