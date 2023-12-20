@@ -119,6 +119,7 @@ export default hopeTheme({
       tabs: true,
       vPre: true,
       vuePlayground: true,
+      footnote: true,
     },
     components: {
       components: ["VPBanner", "VPCard", "VidStack", "YouTube",],

@@ -12,7 +12,7 @@ category:
 
 ## 历届比赛
 
-### YHC S1 (2022.6-2022.7)
+### [YHC S1](S1/README.md)
 
 ![YHC S1 主题](https://files.catbox.moe/0twodv.png "YHC S1 主题" =400x)
 
@@ -20,7 +20,7 @@ category:
 - [主表格📊](https://docs.qq.com/sheet/DUlVlcG54R0hIaUlk)
 - [图池🎮](https://docs.qq.com/sheet/DUnZaR3dxeWhDVWVO)
 
-### YHC S2 (2022.12-2023.2)
+### [YHC S2](S2.md)
 
 ![YHC S2 主题](https://files.catbox.moe/e5c2db.jpg "YHC S2 主题" =400x)
 
@@ -29,7 +29,7 @@ category:
 - [比赛规则⚖️](https://docs.qq.com/doc/DUnljdHlnUkNDYldx)
 - [wiki📖](https://osu.ppy.sh/wiki/zh/Tournaments/YHC/2)
 
-### YHC S3 (2023.6-2023.7)
+### [YHC S3](S3.md)
 
 ![YHC S3 主题](https://files.catbox.moe/uei25u.jpg "YHC S3 主题" =400x)
 
@@ -38,3 +38,13 @@ category:
 - [比赛规则⚖️](https://docs.qq.com/doc/DUlVkUnpKU3JCV09m)
 - [wiki📖](https://osu.ppy.sh/wiki/zh/Tournaments/YHC/3)
 - [赛后结算💎](https://docs.qq.com/sheet/DUkxsTFlNaENSdVhl)
+
+### YHC S4
+
+![YHC S4 主题](https://files.catbox.moe/d0s6zz.png "YHC S4 主题" =400x)
+
+:::center
+
+Coming Soon
+
+:::
