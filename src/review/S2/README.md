@@ -1,6 +1,5 @@
 ---
 title: YHC S2
-icon: lightbulb
 index: false
 ---
 
