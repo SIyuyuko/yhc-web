@@ -30,4 +30,9 @@ export const zhNavbar = navbar([
     icon: "gamepad",
     link: "https://osu.ppy.sh",
   },
+  {
+    text: "比赛歌单",
+    icon: "music",
+    link: "https://music.163.com/#/playlist?id=8069538335",
+  },
 ]);

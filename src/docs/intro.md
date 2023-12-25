@@ -25,7 +25,7 @@ star: true
 
 Yuyuko's Hidden Cup(YHC) 是由玩家 [SIyuyuko](https://osu.ppy.sh/users/9794030) 组织的娱乐向比赛，模式为 osu!standard Score V2 。举办目的是鼓励其他玩家接触 HD ，感受其中魅力所在。
 
-比赛从2022年6月开始举办第一届，截止2023年8月，已经成功举办了三届。
+比赛从 2022 年 6 月开始举办第一届，截止 2023 年 8 月，已经成功举办了三届。
 
 <!-- more -->
 

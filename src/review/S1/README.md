@@ -10,11 +10,13 @@ tag:
 ---
 ## 总览
 
-YHC S1 于 2022 年 5 月 17 日 开始报名，同年 7 月 4 日 结束。
+YHC S1 于 2022 年 5 月 17 日 开始，同年 7 月 4 日 结束。
 
 比赛共有 21 人报名，实际参赛 19 人。
 
 图池共计三轮，分别是个人赛、团队赛一轮、团队赛二轮。
+
+<!-- more -->
 
 ::: info
 
@@ -55,4 +57,4 @@ YHC S1 于 2022 年 5 月 17 日 开始报名，同年 7 月 4 日 结束。
 | 团队赛 #3 | 队名叫有新意的名字 |     [*Zh_Jk*](https://osu.ppy.sh/users/9037287) [newyamakaze](https://osu.ppy.sh/users/12714650) [Vup](https://osu.ppy.sh/users/19755783) [Lil Tai](https://osu.ppy.sh/users/28354000)     |            --            |
 | 团队赛 #4 |  请在此处填写队名  | [*Kotoki1337*](https://osu.ppy.sh/users/6403393) [cx-112](https://osu.ppy.sh/users/18656096) [Boring666](https://osu.ppy.sh/users/16262106) [1584775323](https://osu.ppy.sh/users/24232404) |            --            |
 
-[^first]: 随机零食花费通常在 30 - 40 CNY 之间，S1 的随机零食是[猪肉脯](https://baike.baidu.com/item/猪肉脯)。
+[^first]: 随机零食花费通常在 30 - 40 CNY 之间，S1 的随机零食是**[猪肉脯](https://baike.baidu.com/item/猪肉脯)**。

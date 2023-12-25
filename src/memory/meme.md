@@ -82,6 +82,12 @@ tag:
 
 ![SouJuKu语录精选](<https://files.catbox.moe/8oxbqq.png> =400x)
 
+### 火式卖萌🔥
+
+![火式卖萌🔥](<https://files.catbox.moe/8ygngc.gif> =400x)
+
+---
+
 ::: center
 
 <em>未完待续</em>
