@@ -20,7 +20,6 @@ sticky: true
 # 此页面会出现在文章收藏中
 star: true
 ---
-
 ## 比赛介绍
 
 Yuyuko's Hidden Cup(YHC) 是由玩家 [SIyuyuko](https://osu.ppy.sh/users/9794030) 组织的娱乐向比赛，模式为 osu!standard Score V2 。举办目的是鼓励其他玩家接触 HD ，感受其中魅力所在。
@@ -55,7 +54,7 @@ Yuyuko's Hidden Cup(YHC) 是由玩家 [SIyuyuko](https://osu.ppy.sh/users/979403
 
 如果你目前的游玩情况属于以下的某一类， YHC 或许是一个不错的选择，强烈推荐。
 
-- **默认/大多数时间都使用 HD 游玩谱面**，受限于其他比赛 HD 图池，又打不动其他模组
+- **默认/大多数时间都使用 HD 游玩谱面**，受限于其他比赛 HD 图池，又不擅长其他模组
 
 - 想要在比赛中练习 HD 的 非默认 HD 玩家
 

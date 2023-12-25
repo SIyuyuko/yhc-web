@@ -8,9 +8,9 @@ export const zhNavbar = navbar([
     prefix: "/docs/",
     children: [
       {
-        text:"",
+        text: "",
         icon: "book",
-        children: ["intro","mappool"],
+        children: ["intro", "mappool", "rules"],
       },
     ],
   },
@@ -34,5 +34,9 @@ export const zhNavbar = navbar([
     text: "比赛歌单",
     icon: "music",
     link: "https://music.163.com/#/playlist?id=8069538335",
-  },
+  }, {
+    text: "加入赛群",
+    icon: "comment",
+    link:"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Jf7U5QwUvr38DnVL8ia8liJy6GRw9NSp",
+  }
 ]);

@@ -1,5 +1,5 @@
 ---
-title: 指南
+title: 归档指南
 icon: lightbulb
 index: true
 author: SIyuyuko
