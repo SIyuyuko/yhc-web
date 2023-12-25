@@ -14,7 +14,7 @@
 
 <script setup name="countDown">
 import { ref, onMounted, onBeforeMount } from 'vue';
-let title = ref('距离S4报名');
+let title = ref('距离 S4 报名');
 let week = ref('');
 let date_show = ref('');
 let time_show = ref('');
