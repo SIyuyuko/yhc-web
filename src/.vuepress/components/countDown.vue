@@ -30,7 +30,7 @@ function futureDay() {
 	// 3、未来的日期➖现在的时间
 	// 4、得到相减的结果，换算为，天-小时-分钟-秒
 	// 5、每隔1秒获取一次，直至相减为0（需自己做限制）
-	const end = Date.parse(new Date('2024-01-07 00:00:00'));
+	const end = Date.parse(new Date('2024-01-05 00:00:00'));
 	const now = Date.parse(new Date());
 	const msec = end - now;
 	let day = parseInt(msec / 1000 / 60 / 60 / 24);
@@ -70,7 +70,7 @@ onMounted(() => {
 		if (secs.value.toString().includes("-")) {
 			clearTimeout(refresh);
 			secs.value = "00";
-			title.value = "倒计时结束";
+			title.value = "S4 is Coming";
 		} else {
 			futureDay();
 		}

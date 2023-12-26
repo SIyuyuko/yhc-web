@@ -10,8 +10,7 @@ heroFullScreen: true
 heroText: Yuyuko's Hidden Cup Season 4
 tagline: 即将启动
 actions:
-  - text: 回顾 YHC S3 💗
-    link: https://docs.qq.com/sheet/DUk9nQVFhaEVnU1hK
+  - text: 点击报名 💗
     type: primary
 
   - text: 比赛介绍
