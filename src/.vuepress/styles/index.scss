@@ -35,7 +35,9 @@
 }
 
 .theme-hope-content:not(.custom)>.count-down {
-	margin-top: -300px
+	margin-top: -300px;
+	z-index: 1000;
+	position: relative;
 }
 // global
 body,html{
@@ -63,3 +65,5 @@ body,html{
 		}
 	}
 }
+
+@import url(vuepress-theme-hope/presets/bounce-icon.scss);
