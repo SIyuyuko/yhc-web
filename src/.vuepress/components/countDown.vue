@@ -88,6 +88,7 @@ onMounted(() => {
 		font-size: 1.8rem;
 	}
 	text-shadow:#A8A8A8 1px 0 15px ;
+	color:#9e9e9e;
 }
 </style>
 

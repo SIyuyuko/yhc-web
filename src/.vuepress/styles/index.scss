@@ -2,7 +2,7 @@
 // home style
 #main-title {
 	font-size: 5.6rem;
-	text-shadow: rgba(237, 68, 161, 0.5) 5px 0 25px;
+	text-shadow: rgba(158, 158, 158, 0.5) 5px 0 25px;
 }
 
 #main-description {
@@ -22,7 +22,7 @@
 }
 
 .theme-container.no-sidebar {
-	background-image: url('https://files.catbox.moe/d0s6zz.png');
+	background-image: url('https://files.catbox.moe/402nob.png');
 }
 
 
@@ -39,11 +39,14 @@
 	z-index: 1000;
 	position: relative;
 }
+
 // global
-body,html{
+body,
+html {
 	// cursor: url(https://img.icons8.com/pastel-glyph/36/F25081/cursor--v1.png),auto;
-	cursor: url("./sakura.png"), auto;
+	cursor: url("./star.png"), auto;
 }
+
 // @media
 @media screen and (max-width:755px) {
 	#main-title {
@@ -57,13 +60,13 @@ body,html{
 
 	.theme-hope-content:not(.custom)>.count-down {
 		margin-top: -260px;
-		.title{
+
+		.title {
 			font-size: 1.8rem;
 		}
-		.bar{
+
+		.bar {
 			font-size: 1.5rem;
 		}
 	}
 }
-
-@import url(vuepress-theme-hope/presets/bounce-icon.scss);

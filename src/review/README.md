@@ -41,7 +41,7 @@ category:
 
 ### YHC S4
 
-![YHC S4 主题](https://files.catbox.moe/d0s6zz.png "YHC S4 主题" =400x)
+![YHC S4 主题](https://files.catbox.moe/402nob.png "YHC S4 主题" =400x)
 
 :::center
 
