@@ -58,6 +58,10 @@ html {
 		font-size: 1.6rem;
 	}
 
+	.theme-container.no-sidebar {
+		background-position-x: 665px;
+	}
+
 	.theme-hope-content:not(.custom)>.count-down {
 		margin-top: -260px;
 
