@@ -52,9 +52,13 @@ YHC S1 于 2022 年 5 月 17 日 开始，2022 年 7 月 4 日 结束。
 
 |   名次   |        队伍        |                                                                                       队员                                                                                       |           奖励           |
 | :-------: | :----------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------: |
-| 团队赛 #1 |      都怪幽神      | [*YoungTian*](https://osu.ppy.sh/users/29250968) [Senbe1](https://osu.ppy.sh/users/6911753) [wudahuihui](https://osu.ppy.sh/users/6944810) [1224192602](https://osu.ppy.sh/users/13089663) | 每人一份随机零食[^first] |
+| 团队赛 #1 |      都怪幽神      | [*YoungTian*](https://osu.ppy.sh/users/29250968) [Senbe1](https://osu.ppy.sh/users/6911753) [wudahuihui](https://osu.ppy.sh/users/6944810) [1224192602](https://osu.ppy.sh/users/13089663) | 每人一份随机零食[^first]、非官方主页奖牌[^second] |
 | 团队赛 #2 |      HD怎么打      | [*Kevin0036*](https://osu.ppy.sh/users/24004891) [oimonkey](https://osu.ppy.sh/users/20815553) [kuramasu](https://osu.ppy.sh/users/28637823) [rsshower](https://osu.ppy.sh/users/11777879) |            --            |
 | 团队赛 #3 | 队名叫有新意的名字 |     [*Zh_Jk*](https://osu.ppy.sh/users/9037287) [newyamakaze](https://osu.ppy.sh/users/12714650) [Vup](https://osu.ppy.sh/users/19755783) [Lil Tai](https://osu.ppy.sh/users/28354000)     |            --            |
 | 团队赛 #4 |  请在此处填写队名  | [*Kotoki1337*](https://osu.ppy.sh/users/6403393) [cx-112](https://osu.ppy.sh/users/18656096) [Boring666](https://osu.ppy.sh/users/16262106) [1584775323](https://osu.ppy.sh/users/24232404) |            --            |
 
 [^first]: 随机零食花费通常在 30 - 40 CNY 之间，S1 的随机零食是**[猪肉脯](https://baike.baidu.com/item/猪肉脯)**。
+[^second]: 非官方主页奖牌为 [KanonBot](https://info.desu.life/?p=383) 徽章
+    :::center
+    ![YHC S1 奖牌](<https://files.catbox.moe/6mbcco.png> =300x)
+    :::
