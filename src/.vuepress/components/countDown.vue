@@ -7,14 +7,17 @@
 !-->
 <template>
 	<div class="count-down">
-		<h1 class="title">{{ title }}</h1>
-		<h1 class="bar">还剩 {{ days }} 天 {{ hrs }} 小时 {{ mins }} 分 {{ secs }} 秒</h1>
+		<span class="title">{{ title }}</span><br><br>
+		<span class="bar" :style="status">还剩 {{ days }} 天 {{ hrs }} 小时 {{ mins }} 分 {{ secs }} 秒</span>
 	</div>
 </template>
 
 <script setup name="countDown">
 import { ref, onMounted, onBeforeMount } from 'vue';
 let title = ref('距离 S4 报名');
+let status = ref({
+	visibility: "visible"
+});
 let week = ref('');
 let date_show = ref('');
 let time_show = ref('');
@@ -70,7 +73,8 @@ onMounted(() => {
 		if (secs.value.toString().includes("-")) {
 			clearTimeout(refresh);
 			secs.value = "00";
-			title.value = "S4 is Coming";
+			title.value = "S4 is Coming Now";
+			status.value = { visibility: "hidden" };
 		} else {
 			futureDay();
 		}
@@ -81,13 +85,16 @@ onMounted(() => {
 <style lang="scss" scoped>
 .count-down {
 	text-align: center;
-	.title{
+
+	.title {
 		font-size: 2.2rem;
 	}
-	.bar{
+
+	.bar {
 		font-size: 1.8rem;
 	}
-	text-shadow:#A8A8A8 1px 0 15px ;
+
+	text-shadow:#A8A8A8 1px 0 15px;
 	color:#9e9e9e;
 }
 </style>
