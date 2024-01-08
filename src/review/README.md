@@ -50,3 +50,5 @@ category:
 :::
 
 - [Google 主表格📊](https://docs.google.com/spreadsheets/d/1oVTPfvH2lGp8u6dwkY2lpsklN4SRexZWTvpK779iww4)
+
+- [腾讯主表格📈](https://docs.qq.com/sheet/DUml5ZUhSbVRvZ2tC)
