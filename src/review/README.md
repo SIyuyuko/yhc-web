@@ -45,6 +45,8 @@ category:
 
 :::center
 
-Coming Soon
+比赛正在进行中
 
 :::
+
+- [Google 主表格📊](https://docs.google.com/spreadsheets/d/1oVTPfvH2lGp8u6dwkY2lpsklN4SRexZWTvpK779iww4)

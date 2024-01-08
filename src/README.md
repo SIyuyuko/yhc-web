@@ -8,7 +8,7 @@ bgImageStyle:
   background-attachment: fixed
 heroFullScreen: true
 heroText: Yuyuko's Hidden Cup Season 4
-tagline: 即将启动
+tagline: 正在进行中
 actions:
   - text: 点击报名 🖤
     link: https://docs.qq.com/form/page/DUlFaYW1YbkFIUFhk
@@ -17,7 +17,3 @@ actions:
   - text: 比赛介绍
     link: ./docs/intro
 ---
-<countDown />
-<script setup lang="ts">
-import countDown from "@countDown";
-</script>
