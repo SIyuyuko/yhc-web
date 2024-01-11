@@ -1,7 +1,8 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { getDirname, path } from "@vuepress/utils";
-import metingPlugin from "vuepress-plugin-meting2"
+import metingPlugin from "vuepress-plugin-meting2";
+import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon'
 
 const __dirname = getDirname(import.meta.url);
 
@@ -64,7 +65,17 @@ export default defineUserConfig({
         volume:0.2
       },
       },
+    }),
+    externalLinkIconPlugin({
+      
     })
-  ]
+  ],
+  markdown:{
+    links:{
+      externalAttrs:{
+        
+      }
+    }
+  }
   
 });
