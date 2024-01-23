@@ -10,8 +10,8 @@ heroFullScreen: true
 heroText: Yuyuko's Hidden Cup Season 4
 tagline: 正在进行中
 actions:
-  - text: 点击报名 🖤
-    link: https://docs.qq.com/form/page/DUlFaYW1YbkFIUFhk
+  - text: 主表格 🖤
+    link: https://docs.qq.com/sheet/DUml5ZUhSbVRvZ2tC
     type: primary
 
   - text: 比赛介绍
