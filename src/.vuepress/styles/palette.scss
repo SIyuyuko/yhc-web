@@ -36,6 +36,17 @@ html[data-theme=dark] {
 }
 
 /* font-family */
-$font-family: '"AlibabaPuHuiTi-3-55-Regular", Torus';
-$font-family-heading: '"AlibabaPuHuiTi-3-55-Regular", Torus';
-$font-family-mono: '"AlibabaPuHuiTi-3-55-Regular", Torus';
+// torus resources: https: //github.com/ppy/osu-web/tree/master/resources/fonts/torus
+@font-face {
+	font-family: 'Torus';
+	src: url("/assets/font/Torus-SemiBocld.ttf") format('truetype');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'AlibabaPuHuiTi-3-55-Regular';
+	src: url("/assets/font/AlibabaPuHuiTi-3-55-Regular.ttf") format('truetype');
+	font-display: swap;
+}
+$font-family: 'Torus,"AlibabaPuHuiTi-3-55-Regular"';
+$font-family-heading: '-apple-system,Torus,"AlibabaPuHuiTi-3-55-Regular"';
+$font-family-mono: '-apple-system,Torus,"AlibabaPuHuiTi-3-55-Regular"';

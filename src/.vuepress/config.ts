@@ -26,20 +26,6 @@ export default defineUserConfig({
   theme,
 
   head: [
-    [
-      "link",
-      {
-        href: "/yhc-web/assets/font/AlibabaPuHuiTi-3-55-Regular.ttf",
-        rel: "stylesheet",
-      },
-    ],
-    [
-      "link",
-      {
-        href: "/yhc-web/assets/font/Torus-SemiBold.ttf",
-        rel: "stylesheet",
-      },
-    ],
     
   ],
 
