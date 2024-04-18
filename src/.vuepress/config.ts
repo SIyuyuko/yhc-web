@@ -30,9 +30,11 @@ export default defineUserConfig({
   ],
 
   alias: {
-    "@countDown":path.resolve(__dirname, "components/countDown.vue"),
+    "@countDown": path.resolve(__dirname, "components/countDown.vue"),
+    "@mapPool": path.resolve(__dirname, "components/mapPool.vue"),
+    "@dataApi":path.resolve(__dirname, "api/data_api.js"),
   },
-
+  port:5173,
 
   // Enable it with pwa
   // shouldPrefetch: false,
