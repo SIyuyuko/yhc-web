@@ -8,9 +8,9 @@
 <template>
 	<div class="pool-body" v-if="!status.isLoading">
 		<div class="pool-content">
-			<div v-for="(item, index) in mapData" :key="index" class="map-panel"
+			<div v-for="(item, index) in data" :key="index" class="map-panel" :class="item.isLast ? 'last' : ''"
 				:style="{ 'background-image': `url(${imgApi + item.data.beatmapset_id + imgApiSuffix}) ` }">
-				<div class="content-mask" @mouseover="">
+				<div class="content-mask">
 					<!-- #region 谱面信息 -->
 					<div class="content left">
 						<span>{{ item.data.beatmapset.title }}</span>
@@ -51,24 +51,23 @@
 	</div>
 	<div class="pool-body loading" v-else>
 		<i class="fa-solid fa-spinner fa-spin"></i>
+		<span>loading beatmaps ... ( {{ data.length }} / {{ mapData.sets.length }} )</span>
 	</div>
 </template>
 
 <script setup name="mapPool">
-import { ref, onMounted, watch, defineProps } from 'vue';
+import { ref, onMounted } from 'vue';
 let imgApi = ref("https://assets.ppy.sh/beatmaps/");
 let imgApiSuffix = ref("/covers/card.jpg");
 let beatmapApi = ref("http://osu.ppy.sh/b/");
 let beatmapdownloadApi = ref("https://dl.sayobot.cn/beatmaps/download/");
+let data = ref({});
+let status = ref({});
 const prop = defineProps({
 	mapData: {
-		type: Array,
-		default: []
-	},
-	status: {
 		type: Object,
 		default: {}
-	}
+	},
 });
 function openBeatmapWebsite(bid) {
 	let url = beatmapApi.value + bid;
@@ -90,9 +89,11 @@ function downloadBeatmap(sid) {
 	let url = beatmapdownloadApi.value + sid;
 	window.open(url, "_self");
 }
+
 onMounted(() => {
-	console.log(prop.mapData)
-});
+	data.value = prop.mapData.data;
+	status.value = prop.mapData.status;
+})
 
 </script>
 
@@ -141,16 +142,16 @@ onMounted(() => {
 					width: 80%;
 					justify-content: space-between;
 
-					span:first-child {
-						overflow-x: hidden;
-						text-overflow: ellipsis;
-						white-space: nowrap;
-						width: 230px;
-					}
-
 					span:not(:first-child) {
 						font-size: 10px;
 						color: rgb(176, 178, 178);
+					}
+
+					span {
+						width: 230px;
+						overflow-x: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
 					}
 				}
 
@@ -253,15 +254,27 @@ onMounted(() => {
 			}
 
 		}
+
+		.map-panel.last {
+			margin: 0 160px;
+		}
 	}
-	.pool-title{
+
+	.pool-title {
 		text-align: center;
 		margin: 0 auto;
 		font-size: 0.8rem;
 	}
 }
-.pool-body.loading{
+
+.pool-body.loading {
 	text-align: center;
+	row-gap: 10px;
+
+	span {
+		font-size: 0.8rem;
+		;
+	}
 }
 
 *>input {
