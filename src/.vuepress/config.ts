@@ -1,4 +1,4 @@
-import { defineUserConfig } from "vuepress";
+import { defineUserConfig, viteBundler } from "vuepress";
 import theme from "./theme.js";
 import { getDirname, path } from "@vuepress/utils";
 import metingPlugin from "vuepress-plugin-meting2";
@@ -32,9 +32,25 @@ export default defineUserConfig({
   alias: {
     "@countDown": path.resolve(__dirname, "components/countDown.vue"),
     "@mapPool": path.resolve(__dirname, "components/mapPool.vue"),
-    "@dataApi":path.resolve(__dirname, "api/data_api.js"),
+    "@dataApi": path.resolve(__dirname, "api/data_api.js"),
+    "@mappoolUtil": path.resolve(__dirname, "utils/mappool.js"),
   },
-  port:5173,
+
+  port: 5173,
+
+  bundler: viteBundler({
+    viteOptions: {
+      server: {
+        proxy: {
+          "/pub": {
+            target: "https://bot.365246692.xyz/pub",
+            changeOrigin: true,
+            // rewrite: (path) => path.replace(/^\/pub/, ""),
+          },
+        }
+      }
+    }
+  }),
 
   // Enable it with pwa
   // shouldPrefetch: false,
