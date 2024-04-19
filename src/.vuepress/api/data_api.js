@@ -6,7 +6,11 @@ export const getPPM = params => {
 		params
 	});
 };
-// 获取谱面信息
+/**
+* @description 获取谱面信息
+* @param {Number} params 谱面ID
+* @return void
+*/
 export const getBeatmapInfo = params => {
 	return axios({
 		method: "get",
