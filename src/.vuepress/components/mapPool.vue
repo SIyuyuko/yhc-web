@@ -336,8 +336,13 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
-						width: -webkit-fill-available;
-						height: -webkit-fill-available;
+						width: 300px;
+						height: 60px;
+					}
+				}
+				.content-mask:hover{
+					.operate-mask{
+						visibility: hidden;
 					}
 				}
 			}
