@@ -10,10 +10,13 @@
 		<div class="pool-content">
 			<div v-for="(item, index) in data" :key="index" class="map-panel" :class="item.isLast ? 'last' : ''"
 				:style="{ 'background-image': `url(${imgApi + item.data.beatmapset_id + imgApiSuffix}) ` }">
-				<div class="content-mask">
+				<div class="content-mask" @click="toggleVisible(item)">
 					<!-- #region 谱面信息 -->
 					<div class="content left">
-						<span>{{ item.data.beatmapset.title }}</span>
+						<span>{{ item.data.beatmapset.title }}
+							<span v-if="item.data.beatmapset.title !== item.data.beatmapset.title_unicode">
+								{{ item.data.beatmapset.title_unicode }}</span>
+						</span>
 						<span>{{ item.data.beatmapset.artist }} // {{ item.data.beatmapset.creator }}</span>
 						<span>{{ item.data.version }} - b{{ item.data.id }}</span>
 					</div>
@@ -22,12 +25,15 @@
 							<span>{{ item.tag }}</span>
 						</div>
 						<div class="star">
-							<span>{{ item.data.difficulty_rating }}*</span>
+							<span>{{ item.data.difficulty_rating.toString().split(".")[0] }}<span
+									v-if="item.data.difficulty_rating.toString().split('.')[1]">{{ '.' +
+										item.data.difficulty_rating.toString().split(".")[1] }}</span>*
+							</span>
 						</div>
 					</div>
 					<!-- #endregion -->
 					<!-- #region 快捷按钮组 -->
-					<div class="operate-mask">
+					<div class="operate-mask" :class="item.clicked ? 'clicked' : ''">
 						<div class="operate-button-group">
 							<div class="website-btn" title="查看官网谱面信息" @click="openBeatmapWebsite(item.data.id)">
 								<i class="fa-solid fa-share-from-square"></i>
@@ -56,23 +62,33 @@
 </template>
 
 <script setup name="mapPool">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 let imgApi = ref("https://assets.ppy.sh/beatmaps/");
 let imgApiSuffix = ref("/covers/card.jpg");
 let beatmapApi = ref("http://osu.ppy.sh/b/");
 let beatmapdownloadApi = ref("https://dl.sayobot.cn/beatmaps/download/");
-let data = ref({});
-let status = ref({});
+let data = ref({}); // 图池谱面数据
+let status = ref({}); // 图池状态
+let clickedItem = ref({}); // 当前被点击谱面
 const prop = defineProps({
 	mapData: {
 		type: Object,
 		default: {}
 	},
 });
+// 切换谱面点击状态
+function toggleVisible(item) {
+	if (item) {
+		item.clicked = !item.clicked;// clicked为true时，显示谱面快捷按钮组
+		clickedItem.value = item;
+	}
+}
+// 打开谱面官网链接
 function openBeatmapWebsite(bid) {
 	let url = beatmapApi.value + bid;
 	window.open(url, "_blank");
 }
+// 复制谱面ID
 function copyBeatmapID(item) {
 	let input = document.createElement("input");
 	input.value = item.data.id;
@@ -85,13 +101,25 @@ function copyBeatmapID(item) {
 		item.isCopied = false;
 	}, 1000);
 }
+// 下载谱面文件
 function downloadBeatmap(sid) {
 	let url = beatmapdownloadApi.value + sid;
 	window.open(url, "_self");
 }
+// 监听当前点击谱面
+watch((clickedItem), (ov, nv) => {
+	// 清除上一个谱面的点击状态
+	if (ov !== nv) {
+		nv.clicked = false;
+		ov.clicked = true;
+	};
+}, { deep: false, immediate: false })
 
 onMounted(() => {
 	data.value = prop.mapData.data;
+	data.value.map((item) => {
+		return Object.assign(item, { clicked: false });// 增加谱面点击状态属性
+	});
 	status.value = prop.mapData.status;
 })
 
@@ -142,13 +170,20 @@ onMounted(() => {
 					width: 80%;
 					justify-content: space-between;
 
+					span:first-child {
+						span {
+							font-size: 10px;
+							color: rgb(176, 178, 178);
+						}
+					}
+
 					span:not(:first-child) {
 						font-size: 10px;
 						color: rgb(176, 178, 178);
 					}
 
 					span {
-						width: 230px;
+						width: 215px;
 						overflow-x: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;
@@ -158,14 +193,14 @@ onMounted(() => {
 				.content.right {
 					justify-content: space-between;
 					border-radius: 0 9px 9px 0;
-					width: 50px;
+					width: 65px;
 
 					.tag {
 						border-radius: 0 9px 0 9px;
 						text-align: center;
-						width: 47px;
+						width: 60px;
 						margin: 0 0 0 auto;
-						clip-path: path('M0 0 Q6 2 6 8 Q6 20 20 20 L48 20 L48 0 Z');
+						clip-path: path('M0 0 Q6 2 6 8 Q6 20 20 20 L60 20 L60 0 Z');
 
 						span {
 							padding: 0 2px 0 10px;
@@ -192,10 +227,22 @@ onMounted(() => {
 						background-color: #000000;
 					}
 
+					.tag.EX {
+						background-color: #ff9700;
+					}
+
 					.star {
 						margin: 0 5px 5px 10px;
 						display: flex;
 						justify-content: flex-end;
+
+						span {
+							font-size: 24px;
+
+							span {
+								font-size: 16px;
+							}
+						}
 					}
 
 
@@ -279,5 +326,21 @@ onMounted(() => {
 
 *>input {
 	visibility: hidden;
+}
+
+@media (max-width: 900px) {
+	.pool-body {
+		.pool-content {
+			.map-panel {
+				.content-mask {
+					.operate-mask.clicked {
+						visibility: visible;
+						background-color: rgba(0, 0, 0, 0.6);
+						transition: all 0.3s;
+					}
+				}
+			}
+		}
+	}
 }
 </style>
