@@ -12,17 +12,19 @@ async function getMapInfo(poolList,poolName) {
   		let poolData=poolList[pool].data;
   		for(let item of sets){
     		await getBeatmapInfo(item.id).then((res)=>{
-      			if(res.status&&res.data){
-        		let data=res.data;
-				let tag = item.tag;
-				let last = false;
-        		let obj=Object.assign(data,{tag:tag,isLast:last});
-        		poolData.push(obj);
-        		if(item===sets[sets.length-1]){
-					poolList[pool].status.isLoading = false;
-					isLastMap(poolData);
-        		};
-      			};
+      			if(res.status===200 && res.data){
+        			let data=res.data;
+					let tag = item.tag;
+					let last = false;
+        			let obj=Object.assign(data,{tag:tag,isLast:last});
+        			poolData.push(obj);
+        			if(item===sets[sets.length-1]){
+						poolList[pool].status.isLoading = false;
+						isLastMap(poolData);
+        			};
+					} else {
+						alert("谱面加载失败，请刷新页面重新加载。")
+				};
       		});
 		};
 	};
