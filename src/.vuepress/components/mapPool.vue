@@ -339,8 +339,18 @@ onMounted(() => {
 						width: 300px;
 						height: 60px;
 					}
+					.operate-mask{
+						visibility: hidden;
+					}
 				}
 				.content-mask:hover{
+					.operate-mask.clicked {
+						visibility: visible;
+						background-color: rgba(0, 0, 0, 0.6);
+						transition: all 0.3s;
+						width: 300px;
+						height: 60px;
+					}
 					.operate-mask{
 						visibility: hidden;
 					}
