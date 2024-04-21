@@ -253,8 +253,8 @@ onMounted(() => {
 			.operate-mask {
 				visibility: hidden;
 				position: absolute;
-				width: 100%;
-				height: 100%;
+				width: 300px;
+				height: 60px;
 				display: flex;
 				border-radius: 9px;
 
