@@ -33,16 +33,43 @@ EX 为 S1 表演图，在团队赛二轮结束后游玩，任意模组，ScoreV1
 
 ### 团队赛第一轮
 
-![YHC S1 团队赛第一轮图池](https://files.catbox.moe/kqjhs4.jpg)
-<!-- !gp #YHC S1 R1# HD 1370703 147370 2003640 2204492 3310401 691112 NM 3163222 2551294 FM 1951094 1352167 1052460 221677 TB 2295609 -->
+<Mappool :mapData="poolList.pool1"></Mappool>
 
 ### 团队赛第二轮
 
-![YHC S1 团队赛第二轮图池](https://files.catbox.moe/lsybp3.jpg)
-<!-- !gp #YHC S1 R2# HD 1582583 2037327 1848332 3067288 1205989 1625011 NM 2809461 2601642 FM 3503281 2875377 1630902 2573530 TB 2168358 EX 1725174 -->
+<Mappool :mapData="poolList.pool2"></Mappool>
 
 ## 规则
 
 - 团队赛为 3v3 单败赛。
 
 - 团队赛第一轮前通过抽签决定对阵小队，第一轮比赛胜利的两支队伍将直接进入第二轮。
+
+<script setup>
+import { ref,onBeforeMount } from 'vue';
+import Mappool from '@mapPool';
+import { getMappoolPanel } from '@mappoolUtil';
+let poolList=ref({
+  pool1:{
+    sets:[],
+    data:[],
+    status:{
+      isLoading:true,
+      title:"YHC S1 团队赛第一轮图池",
+    },
+    src:"HD 1370703 147370 2003640 2204492 3310401 691112 NM 3163222 2551294 FM 1951094 1352167 1052460 221677 TB 2295609",
+  },
+  pool2:{
+    sets:[],
+    data:[],
+    status:{
+      isLoading:true,
+      title:"YHC S1 团队赛第二轮图池",
+    },
+    src:"HD 1582583 2037327 1848332 3067288 1205989 1625011 NM 2809461 2601642 FM 3503281 2875377 1630902 2573530 TB 2168358 EX 1725174",
+  },
+});
+onBeforeMount(()=>{
+  poolList.value=getMappoolPanel(poolList.value,"s1mappool");
+})
+</script>

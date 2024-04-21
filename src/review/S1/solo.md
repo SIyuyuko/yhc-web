@@ -19,7 +19,7 @@ tag:
 
 - 个人赛图池固定 Hidden 模组，共 10 张图。
 
-![YHC S1 个人赛图池](https://files.catbox.moe/n1ma16.jpg)
+<Mappool :mapData="poolList.pool1"></Mappool>
 
 <!-- !gp #YHC S1 个人赛# HD 3292536 859001 255163 2657902 284762 671745 1964522 139634 457774 2259769 -->
 
@@ -56,3 +56,28 @@ S1 正式开赛前为选手提供了两次热手图池，用于练习和提前�
 
 - 选手需完整游玩全部赛图，每张图有一次机会，个人赛结束后按一定占比折合分数，得到最终成绩。
 - 赛后根据成绩分出四个队伍，每个队伍个人赛成绩最好的选手为队长。
+
+<script setup>
+import { ref,onBeforeMount } from 'vue';
+import Mappool from '@mapPool';
+import { getMappoolPanel } from '@mappoolUtil';
+let poolList=ref({
+  pool1:{
+    sets:[],
+    data:[],
+    status:{
+      isLoading:true,
+      title:"YHC S1 个人赛图池",
+    },
+    src:"HD 3292536 859001 255163 2657902 284762 671745 1964522 139634 457774 2259769",
+  },
+});
+onBeforeMount(()=>{
+  poolList.value=getMappoolPanel(poolList.value,"s1solomappool");
+})
+</script>
+<style lang="scss" scoped>
+:deep(.pool-body .pool-content .map-panel.last){
+   margin: 0;
+  }
+</style>
