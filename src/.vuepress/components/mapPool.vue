@@ -320,7 +320,6 @@ onMounted(() => {
 
 	span {
 		font-size: 0.8rem;
-		;
 	}
 }
 
@@ -337,6 +336,8 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
+						width: -webkit-fill-available;
+						height: -webkit-fill-available;
 					}
 				}
 			}
