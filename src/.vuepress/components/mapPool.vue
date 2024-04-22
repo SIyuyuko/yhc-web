@@ -344,6 +344,7 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
+						width: -webkit-fill-available;
 						height: 60px;
 					}
 
@@ -353,7 +354,7 @@ onMounted(() => {
 						.operate-button-group {
 							margin: auto;
 							display: flex;
-							width: 0;
+							width: -webkit-fill-available;
 							height: 100%;
 							align-items: center;
 							text-align: center;
@@ -368,7 +369,7 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
-						width: 100%;
+						width: -webkit-fill-available;
 						height: 60px;
 					}
 
