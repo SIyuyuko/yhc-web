@@ -14,7 +14,7 @@ category:
 
 ### [YHC S1](S1/README.md)
 
-![YHC S1 主题](https://files.catbox.moe/0twodv.png "YHC S1 主题" =400x)
+![YHC S1 主题](<https://files.catbox.moe/0twodv.png> "YHC S1 主题" =400x)
 
 - [宣传文档📜](https://docs.qq.com/doc/DUkJnR1BubEZWaXhM)
 - [主表格📊](https://docs.qq.com/sheet/DUlVlcG54R0hIaUlk)
@@ -22,7 +22,7 @@ category:
 
 ### [YHC S2](S2.md)
 
-![YHC S2 主题](https://files.catbox.moe/e5c2db.jpg "YHC S2 主题" =400x)
+![YHC S2 主题](<https://files.catbox.moe/e5c2db.jpg> "YHC S2 主题" =400x)
 
 - [宣传文档📜](https://docs.qq.com/doc/DUnpBUFlQcWR1ZWVa)
 - [主表格📊](https://docs.qq.com/sheet/DUkhYRERQUWVTY2lE)
@@ -31,7 +31,7 @@ category:
 
 ### [YHC S3](S3.md)
 
-![YHC S3 主题](https://files.catbox.moe/uei25u.jpg "YHC S3 主题" =400x)
+![YHC S3 主题](<https://files.catbox.moe/uei25u.jpg> "YHC S3 主题" =400x)
 
 - [宣传文档📜](https://docs.qq.com/doc/DUnhsRlNKZmJrQUFI)
 - [主表格📊](https://docs.qq.com/sheet/DUk9nQVFhaEVnU1hK)
@@ -39,16 +39,16 @@ category:
 - [wiki📖](https://osu.ppy.sh/wiki/zh/Tournaments/YHC/3)
 - [赛后结算💎](https://docs.qq.com/sheet/DUkxsTFlNaENSdVhl)
 
-### YHC S4
+### [YHC S4](S4.md)
 
-![YHC S4 主题](https://files.catbox.moe/402nob.png "YHC S4 主题" =400x)
+![YHC S4 主题](<https://files.catbox.moe/402nob.png> "YHC S4 主题" =400x)
 
-:::center
+- [Google 主表格📊](https://docs.google.com/spreadsheets/d/1oVTPfvH2lGp8u6dwkY2lpsklN4SRexZWTvpK779iww4)
+- [腾讯主表格📈](https://docs.qq.com/sheet/DUml5ZUhSbVRvZ2tC)
+- [赛后结算💎](https://docs.qq.com/sheet/DUmtiZWZNdEx2eG5W)
+
+<!-- :::center
 
 比赛正在进行中
 
-:::
-
-- [Google 主表格📊](https://docs.google.com/spreadsheets/d/1oVTPfvH2lGp8u6dwkY2lpsklN4SRexZWTvpK779iww4)
-
-- [腾讯主表格📈](https://docs.qq.com/sheet/DUml5ZUhSbVRvZ2tC)
+::: -->
