@@ -159,6 +159,7 @@ onMounted(() => {
 				border-radius: 9px;
 				width: 100%;
 				justify-content: space-between;
+				position: relative;
 
 				.content {
 					display: flex;
