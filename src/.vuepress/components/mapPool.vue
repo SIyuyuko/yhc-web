@@ -134,7 +134,7 @@ onMounted(() => {
 	flex-direction: column;
 	background-color: #2a2226;
 	border-radius: 10px;
-	padding: 20px 0;
+	padding: 20px;
 
 	.pool-content {
 		display: flex;
@@ -157,6 +157,8 @@ onMounted(() => {
 				backdrop-filter: brightness(0.4) blur(0.4px);
 				display: flex;
 				border-radius: 9px;
+				width: 100%;
+				justify-content: space-between;
 
 				.content {
 					display: flex;
@@ -167,7 +169,7 @@ onMounted(() => {
 				.content.left {
 					padding: 5px 10px;
 					border-radius: 9px 0 0 9px;
-					width: 80%;
+					width: 100%;
 					justify-content: space-between;
 
 					span:first-child {
@@ -183,7 +185,6 @@ onMounted(() => {
 					}
 
 					span {
-						width: 215px;
 						overflow-x: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;
@@ -253,7 +254,7 @@ onMounted(() => {
 			.operate-mask {
 				visibility: hidden;
 				position: absolute;
-				width: 300px;
+				width: 100%;
 				height: 60px;
 				display: flex;
 				border-radius: 9px;
@@ -302,9 +303,6 @@ onMounted(() => {
 
 		}
 
-		.map-panel.last {
-			margin: 0 160px;
-		}
 	}
 
 	.pool-title {
@@ -331,32 +329,63 @@ onMounted(() => {
 	.pool-body {
 		.pool-content {
 			.map-panel {
+				min-width: 0;
+				width: 100%;
+				.content-mask{
+					.content.left{
+						width: 80%;
+					}
+				}
+
 				.content-mask {
 					.operate-mask.clicked {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
-						width: 300px;
+						width: 100%;
 						height: 60px;
 					}
-					.operate-mask{
+
+					.operate-mask {
 						visibility: hidden;
 					}
 				}
-				.content-mask:hover{
+
+				.content-mask:hover {
 					.operate-mask.clicked {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
-						width: 300px;
+						width: 100%;
 						height: 60px;
 					}
-					.operate-mask{
+
+					.operate-mask {
 						visibility: hidden;
 					}
 				}
 			}
 		}
 	}
+}
+
+@media (min-width: 900px) {
+	.pool-body {
+		.pool-content {
+			.map-panel {
+				width: calc(50% - 12px);
+				.content-mask{
+					.content.left{
+						width: 68%;
+					}
+				}
+			}
+
+			.map-panel.last {
+				width: 50%;
+			}
+		}
+	}
+
 }
 </style>
