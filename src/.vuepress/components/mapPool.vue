@@ -334,6 +334,7 @@ onMounted(() => {
 				.content-mask{
 					.content.left{
 						width: 80%;
+						overflow: hidden;
 					}
 				}
 
