@@ -254,6 +254,7 @@ onMounted(() => {
 			.operate-mask {
 				visibility: hidden;
 				position: absolute;
+				max-width: 100%;
 				width: 100%;
 				height: 60px;
 				display: flex;
@@ -344,6 +345,7 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
+						max-width: 100%;
 						width: -webkit-fill-available;
 						height: 60px;
 					}
@@ -354,7 +356,7 @@ onMounted(() => {
 						.operate-button-group {
 							margin: auto;
 							display: flex;
-							width: -webkit-fill-available;
+							max-width: 100%;
 							height: 100%;
 							align-items: center;
 							text-align: center;
@@ -369,6 +371,7 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
+						max-width: 100%;
 						width: -webkit-fill-available;
 						height: 60px;
 					}
