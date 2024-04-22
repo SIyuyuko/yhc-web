@@ -249,46 +249,45 @@ onMounted(() => {
 
 				}
 
-			}
-
-			.operate-mask {
-				visibility: hidden;
-				position: absolute;
-				max-width: 100%;
-				width: 100%;
-				height: 60px;
-				display: flex;
-				border-radius: 9px;
-
-				.operate-button-group {
-					display: flex;
+				.operate-mask {
+					visibility: hidden;
+					position: absolute;
+					max-width: 100%;
 					width: 100%;
-					height: 100%;
-					align-items: center;
-					text-align: center;
-					justify-content: center;
-					column-gap: 50px;
+					height: 60px;
+					display: flex;
+					border-radius: 9px;
 
-					&>div {
-						font-size: 18px;
-						cursor: pointer;
-					}
+					.operate-button-group {
+						display: flex;
+						width: 100%;
+						height: 100%;
+						align-items: center;
+						text-align: center;
+						justify-content: center;
+						column-gap: 50px;
 
-					&>div:hover {
-						color: rgba(176, 178, 178, 0.8);
-					}
-
-					&>div:active {
-						color: rgb(176, 178, 178);
-					}
-
-					.copy-btn {
-						i.copied:hover {
-							color: #ffffff;
+						&>div {
+							font-size: 18px;
+							cursor: pointer;
 						}
 
-						i.copied:active {
-							color: #ffffff;
+						&>div:hover {
+							color: rgba(176, 178, 178, 0.8);
+						}
+
+						&>div:active {
+							color: rgb(176, 178, 178);
+						}
+
+						.copy-btn {
+							i.copied:hover {
+								color: #ffffff;
+							}
+
+							i.copied:active {
+								color: #ffffff;
+							}
 						}
 					}
 				}
@@ -301,7 +300,6 @@ onMounted(() => {
 					transition: all 0.3s;
 				}
 			}
-
 		}
 
 	}
@@ -338,9 +336,7 @@ onMounted(() => {
 						width: 80%;
 						overflow: hidden;
 					}
-				}
 
-				.content-mask {
 					.operate-mask.clicked {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
