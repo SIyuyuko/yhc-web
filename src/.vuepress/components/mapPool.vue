@@ -331,8 +331,9 @@ onMounted(() => {
 			.map-panel {
 				min-width: 0;
 				width: 100%;
-				.content-mask{
-					.content.left{
+
+				.content-mask {
+					.content.left {
 						width: 80%;
 						overflow: hidden;
 					}
@@ -343,12 +344,22 @@ onMounted(() => {
 						visibility: visible;
 						background-color: rgba(0, 0, 0, 0.6);
 						transition: all 0.3s;
-						width: 100%;
 						height: 60px;
 					}
 
 					.operate-mask {
 						visibility: hidden;
+
+						.operate-button-group {
+							margin: auto;
+							display: flex;
+							width: 0;
+							height: 100%;
+							align-items: center;
+							text-align: center;
+							justify-content: center;
+							column-gap: 50px;
+						}
 					}
 				}
 
@@ -375,8 +386,9 @@ onMounted(() => {
 		.pool-content {
 			.map-panel {
 				width: calc(50% - 12px);
-				.content-mask{
-					.content.left{
+
+				.content-mask {
+					.content.left {
 						width: 68%;
 					}
 				}
