@@ -32,6 +32,7 @@ export default defineUserConfig({
   alias: {
     "@countDown": path.resolve(__dirname, "components/countDown.vue"),
     "@mapPool": path.resolve(__dirname, "components/mapPool.vue"),
+    "@bracket": path.resolve(__dirname, "components/bracket.vue"),
     "@dataApi": path.resolve(__dirname, "api/data_api.js"),
     "@mappoolUtil": path.resolve(__dirname, "utils/mappool.js"),
   },
