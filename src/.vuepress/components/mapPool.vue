@@ -386,7 +386,7 @@ onMounted(() => {
 	.pool-body {
 		.pool-content {
 			.map-panel {
-				width: calc(50% - 12px);
+				width: calc(50% - 13px);
 
 				.content-mask {
 					.content.left {
@@ -396,7 +396,8 @@ onMounted(() => {
 			}
 
 			.map-panel.last {
-				width: 50%;
+				width: calc(50% - 13px);
+				margin: 0 13px 0 0;
 			}
 		}
 	}
