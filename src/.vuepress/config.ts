@@ -1,4 +1,5 @@
-import { defineUserConfig, viteBundler } from "vuepress";
+import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 import { getDirname, path } from "@vuepress/utils";
 import metingPlugin from "vuepress-plugin-meting2";
