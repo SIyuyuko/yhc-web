@@ -2,7 +2,7 @@
 // home style
 #main-title {
 	font-size: 5.6rem;
-	text-shadow: rgba(219,112,147, 0.1) 5px 0 25px;
+	text-shadow: rgba(219, 112, 147, 0.1) 5px 0 25px;
 }
 
 #main-description {
@@ -46,6 +46,19 @@ body,
 html {
 	// cursor: url(https://img.icons8.com/pastel-glyph/36/F25081/cursor--v1.png),auto;
 	cursor: url("./star.png"), auto;
+
+	table {
+		tbody {
+			tr {
+				td:has(a) {
+					a {
+						text-wrap: nowrap;
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
 }
 
 // @media
