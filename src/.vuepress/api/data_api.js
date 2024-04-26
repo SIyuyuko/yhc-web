@@ -17,6 +17,17 @@ export const getBeatmapInfo = params => {
 		url: `/pub/api/info/${params}`,
 	});
 };
+/**
+* @description 获取谱面附加信息
+* @param {Object} params 谱面ID
+* @return void
+*/
+export const getBeatmapAttributes = params => {
+	return axios({
+		method: "get",
+		url: `/pub/attr/json?bid=${params.bid}&mods=${params.mod}&mode=${params.mode}`,
+	});
+};
 // 获取谱面bg
 export const getBeatmapBg = params => {
 	return axios({
