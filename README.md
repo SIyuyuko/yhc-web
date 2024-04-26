@@ -1,14 +1,17 @@
+<!-- markdownlint-disable MD041 MD045 -->
 <p align="center">
   <img src="./src/.vuepress/public/logo.png">
 </p>
 
 # Yuyuko's Hidden Cup (YHC) 归档网站
 
-Yuyuko‘s Hidden Cup （以下简称 YHC ）是音乐节奏游戏 osu! 中的一个社区比赛，由玩家 SIyuyuko 主办。
+中文文档 ｜ [English](./README_EN.md)
+
+Yuyuko‘s Hidden Cup *（以下简称 YHC ）* 是音乐节奏游戏 [osu!](https://osu.ppy.sh) 中的一个社区比赛，由玩家 [SIyuyuko](https://osu.ppy.sh/users/9794030) 主办。
 
 本归档网站则是记录、整理每届 YHC 内容，包括图池、参赛选手、赛后总结等。
 
-你可以进入网站全览比赛主要信息，也可以通过整理归档的源表格了解每届比赛详情。
+你可以进入[网站](https://siyuyuko.github.io/yhc-web/)全览比赛主要信息，也可以通过整理归档的源表格了解每届比赛详情。
 
 ## 组成
 
@@ -47,7 +50,7 @@ Yuyuko‘s Hidden Cup （以下简称 YHC ）是音乐节奏游戏 osu! 中的�
 
 ## 贡献指南
 
-感谢你为小站作出的贡献与提议，所有的提议将会在讨论可行性后得到实装。
+感谢你为网站作出的贡献与提议，所有的提议将会在讨论可行性后得到实装。
 
 ### 开发环境
 
@@ -71,7 +74,7 @@ npm run docs:dev
 
 当终端中出现如下内容时，表示运行成功，点击网址即可在浏览器中查看网站
 
-```
+```bash
   vite v5.2.10 dev server running at:
 
   ➜  Local:   http://localhost:5173/yhc-web/
