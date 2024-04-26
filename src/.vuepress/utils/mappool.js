@@ -1,4 +1,4 @@
-import { getBeatmapInfo } from '@dataApi';
+import { getBeatmapInfo, getBeatmapAttributes } from '@dataApi';
 /**
 * @description 获取比赛图池谱面信息
 * @param {Object} poolList 图池列表对象
@@ -8,9 +8,8 @@ import { getBeatmapInfo } from '@dataApi';
 */
 function getMapInfo(poolList, poolName) {
 	for (let pool in poolList) {
-		beatmapsetRequest(poolList, pool);
+		beatmapsetRequest(poolList, pool, poolName);
 	};
-	localStorage.setItem(poolName, JSON.stringify(poolList));
 };
 /**
 * @description 异步请求谱面
@@ -18,28 +17,50 @@ function getMapInfo(poolList, poolName) {
 * @param {String} pool 图池对象
 * @return void
 */
-async function beatmapsetRequest(poolList, pool) {
+/** @param {Boolean} flag 全局判断请求是否失败 */
+let flag = true;
+async function beatmapsetRequest(poolList, pool, poolName) {
 	/** @param {Array} sets 图池谱面ID集合 */
 	let sets = poolList[pool].sets;
 	/** @param {Object} poolData 图池谱面信息集合 */
 	let poolData = poolList[pool].data;
 	for (let item of sets) {
 		await getBeatmapInfo(item.id).then((res) => {
-			if (res.status === 200 && res.data) {
+			if (res?.status === 200 && res?.status) {
 				let data = res.data;
 				let tag = item.tag;
 				let last = false;
-				let obj = Object.assign(data, { tag: tag, isLast: last });
-				poolData.push(obj);
+				let star = 0;
+				let obj = Object.assign(data, { tag: tag, isLast: last, star: star });
+				poolData.push(obj);// 依次增加数据，确定谱面位置
+				// 遍历数组计算带特殊模组谱面的星数
+				poolData.map((e) => {
+					getModDiffStar(e);
+					return e;
+				})
 				if (item === sets[sets.length - 1]) {
 					poolList[pool].status.isLoading = false;
 					isLastMap(poolData);
 				};
 			} else {
-				alert("谱面加载失败，请刷新页面重新加载。")
+				// 报错警告仅限一次
+				if (flag) {
+					window.alert("谱面加载失败，请刷新页面重新加载。");
+					flag = false;
+					// location.reload();// 报错后立刻刷新页面
+					return;
+				}
 			};
+		}).catch((e) => {
+			console.log(e);
 		});
 	};
+	localStorage.setItem(poolName, JSON.stringify(poolList));
+	// 若有谱面请求失败，刷新时清空本地存储
+	if (!flag) {
+		localStorage.removeItem(poolName);
+	}
+	return poolList;
 }
 /**
 * @description 处理比赛图池原数据
@@ -113,4 +134,35 @@ function isLastMap(poolData) {
 		data[data.length - 1].isLast = true;
 	}
 }
-export { getMapInfo, splitPoolString, getMappoolPanel };
+/**
+* @description 计算添加模组后的谱面星数
+* @param {Object} e 谱面对象
+* @param {Object} e.data 谱面信息
+* @param {String} e.tag 游玩模组
+* @param {Number} e.star 计算后星数
+* @return {Object} e 谱面对象
+*/
+async function getModDiffStar(e) {
+	let tagList = ["HR", "DT", "EZ", "FL"];// 需要计算星数的模组列表
+	let info = e.data;
+	let tag = e.tag;
+	e.star = info.difficulty_rating;// 星数默认为谱面原星数
+	let params = {
+		bid: info.id.toString(),
+		mod: tag,
+		mode: info.mode,
+	}
+	// 如果谱面指定模组为模组列表之一，需要额外请求，否则直接return
+	if (tagList.includes(tag)) {
+		await getBeatmapAttributes(params).then((res) => {
+			if (res.data) {
+				let rating = res.data.star_rating;
+				e.star = parseFloat(rating.toFixed(2));
+			};
+		});
+		return e;
+	} else {
+		return e;
+	};
+}
+export { getMapInfo, splitPoolString, getMappoolPanel,getModDiffStar };
