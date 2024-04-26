@@ -10,43 +10,35 @@ axios.defaults.baseURL = "https://bot.365246692.xyz";
 
 //http request 拦截器
 axios.interceptors.request.use(
-  config => {
-  // 配置请求头
-    config.headers = {
-        //'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
-		'Content-Type': 'application/json;charset=UTF-8',        // 传参方式json
-		//'token':'80c483d59ca86ad0393cf8a98416e2a1'           // 这里自定义配置，这里传的是token
-		'Access-Control-Allow-Origin':'*',
-		
-    };
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  }
+	config => {
+		// 配置请求头
+		config.headers = {
+			//'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
+			'Content-Type': 'application/json;charset=UTF-8',        // 传参方式json
+			//'token':'80c483d59ca86ad0393cf8a98416e2a1'           // 这里自定义配置，这里传的是token
+			'Access-Control-Allow-Origin': '*',
+
+		};
+		return config;
+	},
+	error => {
+		return Promise.reject(error);
+	}
 );
 
 //http response 拦截器
 axios.interceptors.response.use(
-  response => {
-    return response;
-  },
-  error => {
-	  const { response } = error;
-	  console.log(error);
-    if (response) {
-      // 请求已发出，但是不在2xx的范围
-      showMessage(response.status);// 传入响应码，匹配响应码对应信息
-		return Promise.reject(response.data);
-		// if(response.message.in)
-    } else {
-      message.error(i18n.global.t('notification.badNetwork'));
-    }
-  }
+	response => {
+		return response;
+	},
+	error => {
+		const { response } = error;
+		console.log(error);
+	}
 );
 
 // 封装 GET POST 请求并导出
-export function request(url='', params={}, type='post'){
+export function request(url = '', params = {}, type = 'post') {
 	//设置 url params type 的默认值
 	return new Promise((resolve, reject) => {
 		let promise
