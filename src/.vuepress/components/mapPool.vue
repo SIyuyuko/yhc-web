@@ -25,9 +25,9 @@
 							<span>{{ item.tag }}</span>
 						</div>
 						<div class="star">
-							<span>{{ item.data.difficulty_rating.toString().split(".")[0] }}<span
-									v-if="item.data.difficulty_rating.toString().split('.')[1]">{{ '.' +
-										item.data.difficulty_rating.toString().split(".")[1] }}</span>*
+							<span>{{ item.star.toString().split(".")[0] }}<span
+									v-if="item.star.toString().split('.')[1]">{{ '.' +
+										item.star.toString().split(".")[1] }}</span>*
 							</span>
 						</div>
 					</div>
@@ -62,7 +62,8 @@
 </template>
 
 <script setup name="mapPool">
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, onBeforeMount } from 'vue';
+import { getModDiffStar } from '../utils/mappool';
 let imgApi = ref("https://assets.ppy.sh/beatmaps/");
 let imgApiSuffix = ref("/covers/card.jpg");
 let beatmapApi = ref("http://osu.ppy.sh/b/");
@@ -113,10 +114,18 @@ watch((clickedItem), (ov, nv) => {
 		nv.clicked = false;
 		ov.clicked = true;
 	};
-}, { deep: false, immediate: false })
+}, { deep: false, immediate: false });
+
+onBeforeMount(() => {
+	data.value = prop.mapData.data;
+	// 加载图池前遍历需要计算星数的谱面，不影响原星数
+	data.value.map((e) => {
+		getModDiffStar(e);
+		return e;
+	})
+})
 
 onMounted(() => {
-	data.value = prop.mapData.data;
 	data.value.map((item) => {
 		return Object.assign(item, { clicked: false });// 增加谱面点击状态属性
 	});
