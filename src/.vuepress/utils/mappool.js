@@ -192,7 +192,7 @@ function downloadJsonFile(poolList, poolName) {
 async function loadJson(poolList, poolName, flag) {
 	// 图池对象为ref以便更新数据
 	// 动态引入文件路径判断文件是否存在
-	let filepath = window.origin.includes("github") ? `yhc-web/js/mappool/${poolName}.json` : `../public/js/mappool/${poolName}.json`;
+	let filepath = window.origin.includes("github") ? `./js/mappool/${poolName}.json` : `../public/js/mappool/${poolName}.json`;
 	const file = import(/* @vite-ignore */filepath);
 	// 文件不存在时，请求数据生成json
 	file.then().catch((e) => {
