@@ -33,7 +33,7 @@ axios.interceptors.response.use(
 	},
 	error => {
 		const { response } = error;
-		console.log(error);
+		// console.log(error);
 	}
 );
 

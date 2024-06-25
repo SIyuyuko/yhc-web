@@ -1,4 +1,6 @@
 import { getBeatmapInfo, getBeatmapAttributes } from '@dataApi';
+import { nextTick } from 'vue';
+
 /**
 * @description 获取比赛图池谱面信息
 * @param {Object} poolList 图池列表对象
@@ -55,11 +57,11 @@ async function beatmapsetRequest(poolList, pool, poolName) {
 			console.log(e);
 		});
 	};
-	localStorage.setItem(poolName, JSON.stringify(poolList));
+	// localStorage.setItem(poolName, JSON.stringify(poolList));
 	// 若有谱面请求失败，刷新时清空本地存储
-	if (!flag) {
-		localStorage.removeItem(poolName);
-	}
+	// if (!flag) {
+	// 	localStorage.removeItem(poolName);
+	// }
 	return poolList;
 }
 /**
@@ -156,7 +158,7 @@ async function getModDiffStar(e) {
 	if (tagList.includes(tag)) {
 		await getBeatmapAttributes(params).then((res) => {
 			if (res.data) {
-				let rating = res.data.star_rating;
+				let rating = res.data?.star_rating;
 				e.star = parseFloat(rating.toFixed(2));
 			};
 		});
@@ -165,4 +167,46 @@ async function getModDiffStar(e) {
 		return e;
 	};
 }
-export { getMapInfo, splitPoolString, getMappoolPanel,getModDiffStar };
+/**
+* @description 下载图池Json文件
+* @param {Object} poolList 图池对象
+* @param {String} poolName 图池名称
+* @return 
+*/
+function downloadJsonFile(poolList, poolName) {
+	let link = document.createElement("a");
+	let pool = JSON.stringify(poolList)
+	let blob = new Blob([pool]);
+	link.href = URL.createObjectURL(blob);
+	link.download = poolName + ".json";
+	link.click();
+}
+
+/**
+* @description 加载图池Json文件
+* @param {ref} poolList 图池ref对象
+* @param {String} poolName 图池名称
+* @param {String} filepath 文件相对路径(以此目录为参考点)
+* @param {ref} flag 是否显示下载json按钮
+* @return void
+*/
+async function loadJson(poolList, filepath, poolName, flag) {
+	// 图池对象为ref以便更新数据
+	// 动态引入文件路径判断文件是否存在
+	const file = import(/* @vite-ignore */filepath);
+	// 文件不存在时，请求数据生成json
+	file.then().catch((e) => {
+		poolList.value = getMappoolPanel(poolList.value, poolName);
+		flag.value = true;
+	});
+	// 文件存在时，读取文件json
+	if (file.status !== "rejected") {
+		await file.then((res) => {
+			nextTick(() => {
+				poolList.value = res.default;
+				flag.value = false;
+			})
+		});
+	}
+}
+export { getMapInfo, splitPoolString, getMappoolPanel, getModDiffStar, downloadJsonFile, loadJson };

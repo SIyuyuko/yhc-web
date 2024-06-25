@@ -62,13 +62,13 @@
 </template>
 
 <script setup name="mapPool">
-import { ref, onMounted, watch, onBeforeMount } from 'vue';
+import { ref, onMounted, watch, nextTick } from 'vue';
 import { getModDiffStar } from '../utils/mappool';
 let imgApi = ref("https://assets.ppy.sh/beatmaps/");
 let imgApiSuffix = ref("/covers/card.jpg");
 let beatmapApi = ref("http://osu.ppy.sh/b/");
 let beatmapdownloadApi = ref("https://dl.sayobot.cn/beatmaps/download/");
-let data = ref({}); // 图池谱面数据
+let data = ref(null); // 图池谱面数据
 let status = ref({}); // 图池状态
 let clickedItem = ref({}); // 当前被点击谱面
 const prop = defineProps({
@@ -116,20 +116,27 @@ watch((clickedItem), (ov, nv) => {
 	};
 }, { deep: false, immediate: false });
 
-onBeforeMount(() => {
-	data.value = prop.mapData.data;
-	// 加载图池前遍历需要计算星数的谱面，不影响原星数
-	data.value.map((e) => {
-		getModDiffStar(e);
-		return e;
+watch(() => { prop.mapData }, () => {
+	nextTick(() => {
+		// console.log(prop.mapData);
+		data.value = prop.mapData.data;
+		// 加载图池前遍历需要计算星数的谱面，不影响原星数
+		data.value?.map((e) => {
+			getModDiffStar(e);
+			return e;
+		})
 	})
-})
+},{immediate:true,deep:true})
 
 onMounted(() => {
-	data.value.map((item) => {
-		return Object.assign(item, { clicked: false });// 增加谱面点击状态属性
-	});
-	status.value = prop.mapData.status;
+	nextTick(() => {
+		if (data.value) {
+			data.value?.map((item) => {
+				return Object.assign(item, { clicked: false });// 增加谱面点击状态属性
+			});
+			status.value = prop.mapData.status;
+		}	
+	})
 })
 
 </script>

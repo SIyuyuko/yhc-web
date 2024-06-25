@@ -39,6 +39,8 @@ EX 为 S1 表演图，在团队赛二轮结束后游玩，任意模组，ScoreV1
 
 <Mappool :mapData="poolList.pool2"></Mappool>
 
+<button v-if="flag" @click="downloadJsonFile(poolList,poolName)">下载json</button>
+
 ## 规则
 
 - 团队赛为 3v3 单败赛。
@@ -48,7 +50,7 @@ EX 为 S1 表演图，在团队赛二轮结束后游玩，任意模组，ScoreV1
 <script setup>
 import { ref,onBeforeMount } from 'vue';
 import Mappool from '@mapPool';
-import { getMappoolPanel } from '@mappoolUtil';
+import { loadJson,downloadJsonFile } from '@mappoolUtil';
 let poolList=ref({
   pool1:{
     sets:[],
@@ -69,7 +71,12 @@ let poolList=ref({
     src:"HD 1582583 2037327 1848332 3067288 1205989 1625011 NM 2809461 2601642 FM 3503281 2875377 1630902 2573530 TB 2168358 EX 1725174",
   },
 });
+let poolName="s1mappool";
+let filepath = `../js/mappool/${poolName}.json`;
+let flag=ref(false);
+
 onBeforeMount(()=>{
-  poolList.value=getMappoolPanel(poolList.value,"s1mappool");
-})
+  // Json文件存在时显式赋值poolList，否则直接调用方法
+  poolList.value = loadJson(poolList,filepath,poolName,flag);
+});
 </script>

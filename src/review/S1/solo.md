@@ -21,6 +21,8 @@ tag:
 
 <Mappool :mapData="poolList.pool1"></Mappool>
 
+<button v-if="flag" @click="downloadJsonFile(poolList,poolName)">下载json</button>
+
 <!-- !gp #YHC S1 个人赛# HD 3292536 859001 255163 2657902 284762 671745 1964522 139634 457774 2259769 -->
 
 |                                                谱面名称                                                |        难度        | 星数 | 成绩占比 |
@@ -60,7 +62,7 @@ S1 正式开赛前为选手提供了两次热手图池，用于练习和提前�
 <script setup>
 import { ref,onBeforeMount } from 'vue';
 import Mappool from '@mapPool';
-import { getMappoolPanel } from '@mappoolUtil';
+import { loadJson,downloadJsonFile } from '@mappoolUtil';
 let poolList=ref({
   pool1:{
     sets:[],
@@ -72,9 +74,14 @@ let poolList=ref({
     src:"HD 3292536 859001 255163 2657902 284762 671745 1964522 139634 457774 2259769",
   },
 });
+let poolName="s1solomappool";
+let filepath = `../js/mappool/${poolName}.json`;
+let flag=ref(false);
+
 onBeforeMount(()=>{
-  poolList.value=getMappoolPanel(poolList.value,"s1solomappool");
-})
+  // Json文件存在时显式赋值poolList，否则直接调用方法
+  poolList.value = loadJson(poolList,filepath,poolName,flag);
+});
 </script>
 <style lang="scss" scoped>
 :deep(.pool-body .pool-content .map-panel.last){
