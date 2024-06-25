@@ -72,11 +72,10 @@ let poolList=ref({
   },
 });
 let poolName="s1mappool";
-let filepath = `../js/mappool/${poolName}.json`;
 let flag=ref(false);
 
 onBeforeMount(()=>{
   // Json文件存在时显式赋值poolList，否则直接调用方法
-  poolList.value = loadJson(poolList,filepath,poolName,flag);
+  poolList.value = loadJson(poolList,poolName,flag);;
 });
 </script>
