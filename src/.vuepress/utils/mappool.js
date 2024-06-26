@@ -192,27 +192,21 @@ function downloadJsonFile(poolList, poolName) {
 async function loadJson(poolList, poolName, flag) {
 	// 图池对象为ref以便更新数据
 	// 动态引入文件路径判断文件是否存在
-	let filepath = window.origin.includes("github") ? `/yhc-web/assets/js/mappool/${poolName}.json` : `/yhc-web/@fs/Users/siyuyuko/Project/osu/yhc-web/src/.vuepress/public/assets/js/mappool/${poolName}.json`;
-	// await import(/* @vite-ignore */filepath).then((res) => {
-	// 	// 文件存在时，读取文件json
-	// 	poolList.value = res.default;
-	// 	flag.value = false;
-	// }).catch((e) => {
-	// 	// 文件不存在时，请求数据生成json
-	// 	poolList.value = getMappoolPanel(poolList.value, poolName);
-	// 	flag.value = true;
-	// });
-	// console.log(window.origin + filepath);
-	getMappoolJson(filepath).then((res) => {
-		// 文件存在时，读取文件json
-		// console.log(res);
-		poolList.value = res.data;
-		flag.value = false;
-	}).catch((e) => {
-		// console.log(e);
-		// 文件不存在时，请求数据生成json
+	let filepath = window.origin.includes("github") ? `./js/mappool/${poolName}.json` : `../public/js/mappool/${poolName}.json`;
+	const file = import(/* @vite-ignore */filepath);
+	// 文件不存在时，请求数据生成json
+	file.then().catch((e) => {
 		poolList.value = getMappoolPanel(poolList.value, poolName);
 		flag.value = true;
-	})
+	});
+	// 文件存在时，读取文件json
+	if (file.status !== "rejected") {
+		await file.then((res) => {
+			nextTick(() => {
+				poolList.value = res.default;
+				flag.value = false;
+			})
+		});
+	}
 }
 export { getMapInfo, splitPoolString, getMappoolPanel, getModDiffStar, downloadJsonFile, loadJson };
