@@ -192,7 +192,7 @@ function downloadJsonFile(poolList, poolName) {
 async function loadJson(poolList, poolName, flag) {
 	// 图池对象为ref以便更新数据
 	// 动态引入文件路径判断文件是否存在
-	let filepath = window.origin.includes("github") ? `yhc-web/assets/js/mappool/${poolName}.json` : `/yhc-web/@fs/Users/siyuyuko/Project/osu/yhc-web/src/.vuepress/public/assets/js/mappool/${poolName}.json`;
+	let filepath = window.origin.includes("github") ? `/yhc-web/assets/js/mappool/${poolName}.json` : `/yhc-web/@fs/Users/siyuyuko/Project/osu/yhc-web/src/.vuepress/public/assets/js/mappool/${poolName}.json`;
 	// await import(/* @vite-ignore */filepath).then((res) => {
 	// 	// 文件存在时，读取文件json
 	// 	poolList.value = res.default;
@@ -203,7 +203,7 @@ async function loadJson(poolList, poolName, flag) {
 	// 	flag.value = true;
 	// });
 	console.log(window.origin + filepath);
-	axios.post(window.origin+filepath).then((res) => {
+	axios.post(window.origin + filepath).then((res) => {
 		// 文件存在时，读取文件json
 		console.log(res);
 		poolList.value = res.data;
