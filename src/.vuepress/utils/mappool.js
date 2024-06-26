@@ -1,5 +1,5 @@
 import { getBeatmapInfo, getBeatmapAttributes } from '@dataApi';
-import axios from '../http/axios';
+import { getMappoolJson } from '../api/data_api';
 
 /**
 * @description 获取比赛图池谱面信息
@@ -202,14 +202,14 @@ async function loadJson(poolList, poolName, flag) {
 	// 	poolList.value = getMappoolPanel(poolList.value, poolName);
 	// 	flag.value = true;
 	// });
-	console.log(window.origin + filepath);
-	axios.post(window.origin + filepath).then((res) => {
+	// console.log(window.origin + filepath);
+	getMappoolJson(filepath).then((res) => {
 		// 文件存在时，读取文件json
-		console.log(res);
+		// console.log(res);
 		poolList.value = res.data;
 		flag.value = false;
 	}).catch((e) => {
-		console.log(e);
+		// console.log(e);
 		// 文件不存在时，请求数据生成json
 		poolList.value = getMappoolPanel(poolList.value, poolName);
 		flag.value = true;
