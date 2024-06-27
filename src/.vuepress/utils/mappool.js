@@ -175,7 +175,7 @@ async function getModDiffStar(e) {
 */
 function downloadJsonFile(poolList, poolName) {
 	let link = document.createElement("a");
-	let pool = JSON.stringify(JSON.stringify(poolList));
+	let pool = JSON.stringify(poolList);
 	let blob = new Blob([pool]);
 	link.href = URL.createObjectURL(blob);
 	link.download = poolName + ".js";
@@ -203,7 +203,7 @@ async function loadJson(poolList, poolName, flag) {
 	if (file.status !== "rejected") {
 		await file.then((res) => {
 			nextTick(() => {
-				poolList.value = JSON.parse(res.default);
+				poolList.value = res.default;
 				flag.value = false;
 			})
 		});

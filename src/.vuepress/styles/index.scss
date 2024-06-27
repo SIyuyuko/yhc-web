@@ -22,7 +22,8 @@
 }
 
 .theme-container.no-sidebar {
-	background-image: url('https://files.catbox.moe/6drp86.png');
+	// background-image: url('https://files.catbox.moe/6drp86.png');
+	background-image: url("./assets/image/theme_bg-min.png");
 	background-size: cover;
 }
 
@@ -45,7 +46,7 @@
 body,
 html {
 	// cursor: url(https://img.icons8.com/pastel-glyph/36/F25081/cursor--v1.png),auto;
-	cursor: url("./star.png"), auto;
+	cursor: url("./sakura.png"), auto;
 
 	table {
 		tbody {
