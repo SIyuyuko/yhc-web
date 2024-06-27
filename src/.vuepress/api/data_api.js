@@ -68,10 +68,3 @@ export const getUserInfo = params => {
 		params
 	});
 };
-// 获取图池json
-export const getMappoolJson = params => {
-	return axios({
-		method: "post",
-		url: window.origin + params,
-	});
-};

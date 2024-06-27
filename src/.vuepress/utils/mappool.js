@@ -1,5 +1,5 @@
 import { getBeatmapInfo, getBeatmapAttributes } from '@dataApi';
-import { getMappoolJson } from '../api/data_api';
+import { nextTick } from 'vue';
 
 /**
 * @description 获取比赛图池谱面信息
@@ -175,10 +175,10 @@ async function getModDiffStar(e) {
 */
 function downloadJsonFile(poolList, poolName) {
 	let link = document.createElement("a");
-	let pool = JSON.stringify(poolList)
+	let pool = JSON.stringify(JSON.stringify(poolList));
 	let blob = new Blob([pool]);
 	link.href = URL.createObjectURL(blob);
-	link.download = poolName + ".json";
+	link.download = poolName + ".js";
 	link.click();
 }
 
@@ -192,8 +192,8 @@ function downloadJsonFile(poolList, poolName) {
 async function loadJson(poolList, poolName, flag) {
 	// 图池对象为ref以便更新数据
 	// 动态引入文件路径判断文件是否存在
-	let filepath = window.origin.includes("github") ? `./js/mappool/${poolName}.json` : `../public/js/mappool/${poolName}.json`;
-	const file = import(/* @vite-ignore */filepath);
+	let filepath = window.origin.includes("github") ? `./js/mappool/${poolName}.js` : `../public/assets/js/mappool/${poolName}.js`;
+	const file = import(/* @vite-ignore */filepath, { assert: { type: "text/javascript" } });
 	// 文件不存在时，请求数据生成json
 	file.then().catch((e) => {
 		poolList.value = getMappoolPanel(poolList.value, poolName);
@@ -203,7 +203,7 @@ async function loadJson(poolList, poolName, flag) {
 	if (file.status !== "rejected") {
 		await file.then((res) => {
 			nextTick(() => {
-				poolList.value = res.default;
+				poolList.value = JSON.parse(res.default);
 				flag.value = false;
 			})
 		});
