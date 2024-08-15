@@ -23,6 +23,6 @@
   "dependencies": {
     "@vuepress/plugin-blog": "^2.0.0-rc.26",
     "@vuepress/plugin-photo-swipe": "^2.0.0-rc.26",
-    "axios": "^1.6.8"
+    "axios": "^1.7.4"
   }
 }
